@@ -1,0 +1,168 @@
+body{
+    margin:0;
+    padding:0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:rgb(52, 49, 49);
+    padding: 15px 30px;
+    background-color:rgb(202, 195, 195);
+}
+.navbar h1{
+    margin:0;
+    font-style:italic;
+}
+
+.navbar nav img{
+    width:22px;
+    transition: 0.3s;
+}
+
+.navbar nav img:hover{
+    transform: scale(1.2);
+}
+.a{
+    text-decoration:none;
+    color:rgb(35, 34, 34);
+    padding-right:20px;
+}
+#logo{
+    border-radius:100px;
+}
+
+.hero{
+    text-align:center;
+    padding:80px 20px;
+    margin:1px;
+    background:url(./hero.jpg);
+    height:90vh;
+}
+#btn:hover{
+    color:white;
+    background-color:gray;
+}
+#btn{
+    border-radius:20px;
+    padding:15px;
+    box-shadow: 5px 10px 15px black;
+}
+.categories{
+    padding:50px;
+    text-align:center;
+}
+
+.category-container{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    margin-top:20px;
+}
+.category {
+    background:whitesmoke;
+    width:150px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 10px gray;
+    cursor:pointer;
+}
+.category a{
+    text-decoration:none;
+    color:black;
+}
+
+.image{
+    display:flex;
+    justify-content:space-evenly;
+    gap:25px;
+    flex-wrap:wrap;
+    background-color:rgb(228, 221, 221);
+}
+.fiction{
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    border:1px solid black;
+    margin:20px;
+    background-color:rgb(238, 228, 228);
+}
+.fiction img{
+    position:relative;
+    z-index:1;
+    object-fit:cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+.fiction:hover img {
+    transform: scale(1.08);
+}
+.fiction button{
+    margin:8px 5px;
+    padding:8px;
+    width:80px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3 ease;
+}
+.fiction button:first-of-type {
+    background-color: #115a8b;
+    color: white;
+}
+
+.fiction button:first-of-type:hover {
+    background-color: #073d62;
+}
+.fiction button:last-of-type {
+    background-color: #0da64d;
+    color: white;
+}
+
+.fiction button:last-of-type:hover {
+    background-color: #085226;
+}
+.b{
+    width:200px;
+    height:280px;
+    margin:20px;
+    border-radius:8px;
+    border:1px solid black;
+}
+
+#foot{
+    background-color:rgb(202, 195, 195);
+    text-align:center;
+    height:100px;
+}
+#foot h2{
+    padding:40px;
+}
+
+.wishlist {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 6px 10px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    z-index:10;
+}
+
+.wishlist.active {
+    color: red;
+    background:black;
+}
+
+#wish{
+    text-decoration:none;
+    color:black;
+}
+.wishlist:hover {
+    transform: scale(1.1);
+}

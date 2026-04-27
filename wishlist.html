@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Wishlist - Bookish Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h1>My Wishlist </h1>
+    <a href="index.php" id="wish">Back to Shop</a>
+</header>
+
+<div class="image" id="wishlist-container">
+</div>
+<script>
+
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+let container = document.getElementById("wishlist-container");
+
+// Display books
+function displayWishlist() {
+
+    container.innerHTML = "";
+
+    if (wishlist.length === 0) {
+        container.innerHTML = "<h2 style='text-align:center;'>Your Wishlist is Empty</h2>";
+        return;
+    }
+
+    wishlist.forEach((book, index) => {
+
+        let bookDiv = document.createElement("div");
+        bookDiv.classList.add("fiction");
+
+        bookDiv.innerHTML = `
+            <img src="${book.image}" class="b" alt="Book Image">
+            <h4>${book.name}</h4>
+            <b>${book.price}</b><br>
+            <button onclick="removeFromWishlist(${index})" style="background:red;">Remove</button>
+        `;
+
+        container.appendChild(bookDiv);
+    });
+}
+
+// Remove book
+function removeFromWishlist(index){
+    wishlist.splice(index,1);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    displayWishlist();
+}
+
+// Load when page opens
+displayWishlist();
+
+</script>
+</body>
+</html>

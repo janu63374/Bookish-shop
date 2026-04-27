@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Bookish Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            background-color:rgb(202, 195, 195);
+        }
+        .form-container{
+            width:350px;
+            margin:100px auto;
+            padding:45px;
+            background:white;
+            box-shadow:0 10px 25px gray;
+            border-radius:10px;
+            text-align:center;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        .form-btn{
+            background:black;
+            color:white;
+            padding:10px;
+            border:none;
+            cursor:pointer;
+            border-radius:6px;
+        }
+
+        .form-btn:hover{
+            background:gray;
+        }
+        #home{
+            text-decoration:none;
+            color:white;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Register</h2>
+
+    <input type="text" id="name" placeholder="Full Name" autocomplete="off">
+    <input type="email" id="email" placeholder="Email" autocomplete="off">
+    <input type="password" id="password" placeholder="Password" autocomplete="new-password">
+
+    <button class="form-btn" onclick="register()">Register</button>
+    <button class="form-btn"><a href="index.html" id="home">Home</a></button>
+
+    <p>Already have account? <a href="login.html">Login</a></p>
+</div>
+
+<script>
+function register(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    if(name === "" || email === "" || password === ""){
+        alert("Please fill all fields");
+    }else{
+        alert("Registered Successfully (Frontend Only)");
+        window.location.href = "login.html";
+    }
+}
+</script>
+
+</body>
+</html>
